@@ -1,0 +1,58 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        int longWallWidth;
+        System.out.print("Введите ширину длинной стены: ");
+        Scanner longWallWidthScanner = new Scanner(System.in);
+        longWallWidth = longWallWidthScanner.nextInt();
+        int longWallHeight;
+        System.out.print("Введите высоту длинной стены: ");
+        Scanner longWallHeightScanner = new Scanner(System.in);
+        longWallHeight = longWallHeightScanner.nextInt();
+
+        int longWallArea = longWallWidth * longWallHeight;
+        System.out.println("Площадь длинной стены: " + longWallArea);
+
+        int shortWallWidth;
+        System.out.print("Введите ширину короткой стены: ");
+        Scanner shortWallWidthScanner = new Scanner(System.in);
+        shortWallWidth = shortWallWidthScanner.nextInt();
+        int shortWallHeight;
+        System.out.print("Введите высоту короткой стены: ");
+        Scanner shortWallHeightScanner = new Scanner(System.in);
+        shortWallHeight = shortWallHeightScanner.nextInt();
+
+        int shortWallArea = shortWallWidth * shortWallHeight;
+        System.out.println("Площадь короткой стены: " + shortWallArea);
+
+        int roomArea = (longWallArea + shortWallArea) * 2;
+        System.out.println("Площадь комнаты: " + roomArea);
+
+        System.out.print("Для нахождения площади комнаты без учёта площадей двери и окна необходимо ввести данные: \nВысота двери: ");
+        Scanner doorHightScanner = new Scanner(System.in);
+        int doorHight = doorHightScanner.nextInt();
+
+        System.out.println("Затем ширина двери: ");
+        Scanner doorWidthScanner = new Scanner(System.in);
+        int doorWidth = doorWidthScanner.nextInt();
+        int doorArea = doorHight * doorWidth;
+
+        System.out.println("А также высота окна: ");
+        Scanner windowHeightScanner = new Scanner(System.in);
+        int windowHeight = windowHeightScanner.nextInt();
+
+        System.out.println("И его ширина: ");
+        Scanner windowWidthScanner = new Scanner(System.in);
+        int windowWidth = windowWidthScanner.nextInt();
+        int windowArea = windowHeight * windowWidth;
+
+        int roomArea2 = roomArea - (doorArea + windowArea);
+        System.out.println("Площадь комнаты без учёта площадей двери и окна: " + roomArea2);
+
+        int areaOfOnePiece = 4;
+        int amount = roomArea2 / areaOfOnePiece;
+        System.out.println("Количество рулонов обоев, которые потребуются для оклейки: " + amount);
+
+    }
+}
