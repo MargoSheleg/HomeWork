@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите число 1: ");
+        Scanner keyboard = new Scanner(System.in);
+        int arg1 = keyboard.nextInt(2);
+
+        System.out.println("Введите число 2: ");
+        Scanner keyboard2 = new Scanner(System.in);
+        int arg2 = keyboard2.nextInt(2);
+
+        int result = arg1 + arg2;
+
+        System.out.print(Integer.toBinaryString(arg1) + "+");
+        System.out.print(Integer.toBinaryString(arg2) + "=");
+        System.out.println(Integer.toBinaryString(result));
+
+        System.out.println(arg1 + "+" + arg2 + "=" + result);
+    }
+}
