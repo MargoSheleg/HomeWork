@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите Ваш текст: ");
+        Scanner scanText = new Scanner(System.in);
+        String text = scanText.nextLine();
+
+        System.out.print("Введите номер первого символа слова, которое Вы хотите удалить: ");
+        Scanner scanFirstLetter = new Scanner(System.in);
+        int numberFirstLetter = scanFirstLetter.nextInt() -1;
+
+        System.out.print("Введите номер последнего символа этого слова: ");
+        Scanner scanLastLetter = new Scanner(System.in);
+        int numberLastLetter = scanLastLetter.nextInt();
+
+        String word = text.substring(numberFirstLetter, numberLastLetter);
+
+        System.out.println("Вы хотите удалить слово <" + word + ">");
+
+        System.out.println("Ваш текст без этого слова выглядит так: ");
+
+        String textMinusWord1 = text.substring(0, numberFirstLetter);
+        String textMinusWord2 = text.substring(numberLastLetter +1, text.length() -1);
+
+        System.out.println(textMinusWord1 + textMinusWord2);
+    }
+}
