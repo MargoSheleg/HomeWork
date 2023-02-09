@@ -1,0 +1,11 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите значение в градусах Цельсия: ");
+        Scanner Celcius = new Scanner(System.in);
+        double Celc = Celcius.nextDouble();
+        double result = Celc * 9 / 5 + 32;
+        System.out.println("Значение в градусах по Фаренгейту: " + result);
+    }
+}
