@@ -1,0 +1,30 @@
+public class Main {
+    public static void main(String[] args) {
+        ParkingPlace placeOne = new ParkingPlace(7);
+        ParkingPlace placeTwo = new ParkingPlace(3);
+        ParkingPlace placeThree = new ParkingPlace(9);
+
+        String parkingPlaceInfo = placeOne.toString(7, "is occupied");
+        String parkingPlace2Info = placeTwo.toString(3, "is not occupied");
+        String parkingPlace3Info = placeThree.toString(9, "is not occupied");
+        System.out.println(parkingPlaceInfo);
+        System.out.println(parkingPlace2Info);
+        System.out.println(parkingPlace3Info);
+    }
+}
+___________________________________________________
+
+public class ParkingPlace {
+    int number;
+    String isOccupied;
+
+    public ParkingPlace(int number) {
+        this.number = number;
+    }
+
+    public String toString(int number, String isOccupied) {
+        this.number = number;
+        this.isOccupied = isOccupied;String carInfo = "Number of the parking lot: " + number + "\nStatus: " + isOccupied + "\n";
+        return carInfo;
+    }
+}
