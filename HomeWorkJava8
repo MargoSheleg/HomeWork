@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Сколько сейчас времени?");
+        Scanner scanTime = new Scanner(System.in);
+        int time = scanTime.nextInt();
+
+        System.out.println("Какой сегодня день недели? Суббота/Воскресенье или будний?");
+        Scanner scanDayOfWeek = new Scanner(System.in);
+        String dayOfWeek = scanDayOfWeek.next();
+
+        System.out.println("Вы дома? (напишите true/false) ");
+        Scanner scanSignalization = new Scanner(System.in);
+        boolean signalization = scanSignalization.nextBoolean();
+
+        if((dayOfWeek.equalsIgnoreCase("Суббота") && time == 11 && !signalization) || dayOfWeek.equalsIgnoreCase("Воскресенье") && !signalization && time == 11) {
+            System.out.println("Подняты шторы");
+        }
+        else if(dayOfWeek.equalsIgnoreCase("Будний") && time == 8 && signalization) {
+            System.out.println("Подняты шторы");
+        }
+        else if(dayOfWeek.equalsIgnoreCase("Будний") && time == 20 && !signalization) {
+            System.out.println("Включен чайник");
+        }
+    }
