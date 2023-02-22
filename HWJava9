@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Введите слово для поиска в словаре:");
+        Scanner scanner = new Scanner(System.in);
+        String word = scanner.next();
+
+        switch (word) {
+            case "Hello": System.out.println("Привет"); break;
+            case "Word": System.out.println("Слово"); break;
+            case "Keyboard": System.out.println("Клавиатура"); break;
+            case "Page": System.out.println("Страница"); break;
+            default: System.out.println("Слово отсутствует в словаре.");
+        }
+    }
+}
