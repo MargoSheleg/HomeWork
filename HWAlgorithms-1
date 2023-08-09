@@ -1,0 +1,22 @@
+public class Main {
+    public static void main(String[] args) {
+        // максимальное значение массива
+        int[] q = {4, 7, 16, 0, 14, 9, 8, 9};
+
+        System.out.println("Max value is: " + getMax(q));
+
+        // проверка, является ли стока палиндромом
+        // я не поняла как делать последнее задание!! объясните его вкратце, пожалуйста, на следующем занятии!!
+
+    }
+
+    public static int getMax(int[] input){
+        int maxValue = input[0];
+        for (int i = input[0]; i < input.length; i++) {
+            if(maxValue<input[i]) {
+                maxValue = input[i];
+            }
+        }
+        return maxValue;
+    }
+}
